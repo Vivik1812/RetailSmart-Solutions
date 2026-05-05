@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.embeddings import OpenAIEmbeddings
@@ -7,10 +8,10 @@ from langchain_openai import ChatOpenAI
 from langchain.chains import RetrievalQA
 
 #Esta linea configura el API KEY
-#os.environ["OPENAI_API_KEY"] = "KEY"
+load_dotenv()
 
 #Primer paso: Carga de documentos
-loader = TextLoader("data/documentos.text", encoding="utf-8")
+loader = TextLoader("data/documentos.txt", encoding="utf-8")
 documentos = loader.load()
 
 #Segundo paso: Dividir documentos en fragmentos (chunks)
@@ -38,7 +39,7 @@ modelo = ChatOpenAI(
 #Septimo paso: Crear pipeline RAG
 cadena_rag = RetrievalQA.from_chain_type(
     llm=modelo,
-    retrieve=recuperador,
+    retriever=recuperador,
     return_source_documents=True
 )
 
