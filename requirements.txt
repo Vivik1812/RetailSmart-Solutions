@@ -1,0 +1,4 @@
+langchain
+openai
+fiss-cpu
+tiktoken

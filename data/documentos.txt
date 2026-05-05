@@ -1,0 +1,15 @@
+#Datos de simulacion#
+
+Politica de devoluciones: Los productos pueden devolverse dentro de los primeros 30 dias con boleta.
+
+Producto: Televisor 50 pulgadas
+Stock: Disponible
+Garantia: 1 año
+
+Proceso de pedidos: Los pedidos se procesan en un plazo de 24 horas.
+
+Politica de despacho: Los envios tardan entre 2 a 5 dias habiles.
+
+Producto: Laptop HP
+Stock: Agotado
+Garantia: 2 años
